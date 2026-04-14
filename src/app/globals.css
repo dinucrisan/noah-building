@@ -83,22 +83,7 @@ body {
   position: relative;
 }
 
-/* Mobile: hide video, show ambient gradient instead */
-@media (max-width: 767px) {
-  #video-bg,
-  #video-bg-overlay {
-    display: none !important;
-  }
-
-  body {
-    background:
-      radial-gradient(ellipse at 20% 0%, rgba(201,162,39,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 50%, rgba(201,162,39,0.06) 0%, transparent 40%),
-      radial-gradient(ellipse at 50% 100%, rgba(201,162,39,0.10) 0%, transparent 50%),
-      #0A0A0A;
-    background-attachment: fixed;
-  }
-}
+/* Video background visible on all devices */
 
 /* Touch targets — min 44px for accessibility */
 @media (max-width: 767px) {
