@@ -25,6 +25,7 @@ export default function HeroSection() {
         muted
         loop
         playsInline
+        preload="metadata"
         poster="/videos/hero-poster.jpg"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ zIndex: 0 }}
@@ -35,7 +36,7 @@ export default function HeroSection() {
         <source src="/video_siteimobiliare1.mp4" type="video/mp4" />
       </video>
 
-      {/* Gradient Overlay — left to right */}
+      {/* Gradient Overlay */}
       <div
         className="absolute inset-0"
         style={{
@@ -45,17 +46,18 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Content — left aligned */}
+      {/* Content */}
       <div
-        className="relative flex w-full items-center px-6 md:px-20"
+        className="relative flex w-full items-center justify-center px-6 md:justify-start md:px-20"
         style={{ zIndex: 2, height: "100%" }}
       >
-        <div className="flex flex-col items-start" style={{ maxWidth: "500px" }}>
+        <div className="flex flex-col items-center text-center md:items-start md:text-left" style={{ maxWidth: "500px" }}>
           {/* Gold vertical accent line */}
           <motion.div
             initial={{ opacity: 0, scaleY: 0 }}
             animate={{ opacity: 1, scaleY: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            className="hidden md:block"
             style={{
               width: "1px",
               height: "80px",
@@ -70,11 +72,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            className="text-[18px] md:text-[32px]"
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "32px",
               fontWeight: 700,
-              letterSpacing: "14px",
+              letterSpacing: "8px",
               color: "#FFFFFF",
               textTransform: "uppercase",
               textShadow: "0 2px 20px rgba(0,0,0,0.5)",
@@ -100,9 +102,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+            className="text-[12px] md:text-[16px]"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "16px",
               fontWeight: 500,
               letterSpacing: "6px",
               color: "var(--gold)",
@@ -117,9 +119,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+            className="text-[14px] md:text-[17px]"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "17px",
               fontWeight: 400,
               color: "#CCCCCC",
               lineHeight: 1.8,
@@ -137,11 +139,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+            className="w-full md:w-auto"
             style={{ marginTop: "32px" }}
           >
             <Link
               href="/proprietati"
-              className="inline-block transition-all duration-[400ms]"
+              className="block w-full text-center transition-all duration-[400ms] md:inline-block md:w-auto"
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "15px",
@@ -173,15 +176,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
-            className="flex items-center"
+            className="flex items-center justify-center md:justify-start"
             style={{ marginTop: "48px", gap: "40px" }}
           >
-            {/* Stat 1 */}
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center md:items-start">
               <span
+                className="text-[28px] md:text-[36px]"
                 style={{
                   fontFamily: "var(--font-heading)",
-                  fontSize: "36px",
                   fontWeight: 700,
                   color: "#FFFFFF",
                 }}
@@ -203,7 +205,6 @@ export default function HeroSection() {
               </span>
             </div>
 
-            {/* Separator */}
             <div
               style={{
                 width: "1px",
@@ -212,12 +213,11 @@ export default function HeroSection() {
               }}
             />
 
-            {/* Stat 2 */}
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center md:items-start">
               <span
+                className="text-[28px] md:text-[36px]"
                 style={{
                   fontFamily: "var(--font-heading)",
-                  fontSize: "36px",
                   fontWeight: 700,
                   color: "#FFFFFF",
                 }}

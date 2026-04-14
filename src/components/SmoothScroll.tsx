@@ -11,6 +11,12 @@ export default function SmoothScroll({
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    // Disable Lenis on mobile / touch devices / iOS Safari
+    const isMobile = window.innerWidth < 768;
+    const isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (isMobile || isTouch) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

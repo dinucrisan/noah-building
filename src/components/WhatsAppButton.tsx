@@ -9,8 +9,8 @@ export default function WhatsAppButton() {
         className="whatsapp-btn"
         style={{
           position: "fixed",
-          bottom: "28px",
-          right: "28px",
+          bottom: "20px",
+          right: "20px",
           zIndex: 9999,
           width: "60px",
           height: "60px",

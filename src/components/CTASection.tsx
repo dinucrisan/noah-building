@@ -38,7 +38,7 @@ export default function CTASection() {
 
       <Link
         href="/contact"
-        className="mt-8 inline-block font-bold transition-all duration-300 hover:scale-[1.03]"
+        className="mt-8 block w-full text-center font-bold transition-all duration-300 hover:scale-[1.03] md:inline-block md:w-auto"
         style={{
           fontFamily: "var(--font-body)",
           fontSize: "16px",

@@ -42,8 +42,8 @@ export default function Navbar() {
       <nav
         className="fixed top-0 left-0 w-full transition-all duration-300"
         style={{
-          zIndex: 100,
-          padding: isScrolled ? "16px 40px" : "16px 40px",
+          zIndex: 9999,
+          padding: isScrolled ? "10px 16px" : "10px 16px",
           background: isScrolled ? "rgba(10,10,10,0.95)" : "transparent",
           backdropFilter: isScrolled ? "blur(20px)" : "none",
           WebkitBackdropFilter: isScrolled ? "blur(20px)" : "none",
@@ -66,7 +66,7 @@ export default function Navbar() {
               priority
               quality={100}
               unoptimized
-              className="h-[70px] w-auto md:h-[110px]"
+              className="h-[40px] w-auto md:h-[110px]"
               style={{
                 width: "auto",
                 objectFit: "contain",
@@ -134,7 +134,7 @@ export default function Navbar() {
             className="flex flex-col items-center justify-center gap-1.5 lg:hidden"
             onClick={() => setIsOpen(true)}
             aria-label="Deschide meniu"
-            style={{ width: "30px", height: "30px" }}
+            style={{ width: "44px", height: "44px" }}
           >
             <span
               className="block h-[2px] w-6 rounded-full"
@@ -162,7 +162,7 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed inset-0 flex flex-col items-center justify-center"
             style={{
-              zIndex: 200,
+              zIndex: 9998,
               backgroundColor: "var(--bg-primary)",
             }}
           >
@@ -170,11 +170,13 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(false)}
               aria-label="Închide meniu"
-                className="absolute top-5 right-5 transition-opacity duration-300 hover:opacity-80"
+                className="absolute top-5 right-5 flex items-center justify-center transition-opacity duration-300 hover:opacity-80"
               style={{
                 color: "var(--gold)",
                 fontSize: "32px",
                 fontFamily: "var(--font-heading)",
+                width: "44px",
+                height: "44px",
               }}
             >
               ✕

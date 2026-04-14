@@ -72,6 +72,10 @@
 }
 
 /* ===== BASE STYLES ===== */
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: #0A0A0A;
   color: var(--text-primary);
@@ -84,5 +88,13 @@ body {
   #video-bg,
   #video-bg-overlay {
     display: none !important;
+  }
+}
+
+/* Touch targets — min 44px for accessibility */
+@media (max-width: 767px) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

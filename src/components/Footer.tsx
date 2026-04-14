@@ -51,11 +51,11 @@ export default function Footer() {
     <footer
       className="w-full"
       style={{
-        padding: "60px 40px",
+        padding: "60px 24px",
         backgroundColor: "var(--bg-footer)",
       }}
     >
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 md:grid-cols-4 md:gap-10">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 text-center md:grid-cols-4 md:gap-10 md:text-left">
         {/* Column 1 - Logo */}
         <div>
           <Image
