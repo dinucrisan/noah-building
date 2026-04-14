@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 .claude/
 public/14751376_3840_2160_24fps (1).mp4
+
+.vercel
